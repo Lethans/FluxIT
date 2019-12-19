@@ -14,11 +14,12 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/details_profile_pic"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:elevation="5dp"
+                android:layout_width="250sp"
+                android:layout_height="250sp"
+                android:elevation="5sp"
                 app:civ_border_color="@color/accent"
-                app:civ_border_width="8dp"
+                app:civ_border_width="6sp"
+                app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintLeft_toRightOf="parent"
                 app:layout_constraintRight_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/profile_guideline"/>
@@ -28,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fullName"
-        android:textColor="@color/primary_text"
-        android:textSize="18sp"
+        android:textColor="@color/secondary_text"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/details_profile_pic"
         app:layout_constraintTop_toBottomOf="@+id/details_profile_pic" />
 
@@ -38,7 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/primary_text"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/details_textView_name"
         app:layout_constraintStart_toEndOf="@+id/details_textView_name"
         app:layout_constraintTop_toBottomOf="@+id/details_profile_pic" />
 
@@ -47,8 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/age"
-        android:textColor="@color/primary_text"
-        android:textSize="18sp"
+        android:textColor="@color/secondary_text"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/details_textView_name"
         app:layout_constraintTop_toBottomOf="@+id/details_textView_name" />
 
@@ -57,7 +59,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/primary_text"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/details_textView_age"
         app:layout_constraintStart_toEndOf="@+id/details_textView_age"
         app:layout_constraintTop_toBottomOf="@+id/details_textView_name" />
 
@@ -66,9 +69,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
-        android:textColor="@color/primary_text"
-        android:textSize="18sp"
-
+        android:textColor="@color/secondary_text"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/details_textView_name"
         app:layout_constraintTop_toBottomOf="@+id/details_textView_age" />
 
@@ -77,9 +79,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/primary_text"
-        android:textSize="15sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/details_textView_email"
         app:layout_constraintStart_toEndOf="@+id/details_textView_email"
         app:layout_constraintTop_toBottomOf="@+id/details_age" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintBottom_toTopOf="@+id/profile_guideline_map"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_guideline_map" />
+
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTop" />
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapContainer"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class RecyclerMainAdapter extends RecyclerView.Adapter<RecyclerMainAdapter.UserViewHolder> {
@@ -80,7 +81,7 @@ public class RecyclerMainAdapter extends RecyclerView.Adapter<RecyclerMainAdapte
     class UserViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.recycler_main_profilePic)
-        ImageView profilePic;
+        CircleImageView profilePic;
         @BindView(R.id.recycler_main_username)
         TextView username;
 

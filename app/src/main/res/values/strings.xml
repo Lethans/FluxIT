@@ -4,9 +4,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="toolbar_search">Search For User</string>
     <string name="recycler_username">Username</string>
-    <string name="fullName">Nombre completo: </string>
-    <string name="age">Edad:</string>
-    <string name="email">Email:</string>
+    <string name="fullName">Nombre completo:</string>
+    <string name="age">Edad:  </string>
+    <string name="email">Email: </string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD9qTHYXYonVLZFXVPyYTfJz8sYRw22cKE</string>
+
 
 
 </resources>
